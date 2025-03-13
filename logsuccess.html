@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>NeoTrust</title>
+    <link rel="stylesheet" href="/public/home.css">
+</head>
+<body>
+    <div class="mastercontainer">
+        <section class="menusec">
+            <div class="menu">
+               <ul>
+                    <li class="logo-container">
+                        <div class="logo"></div>
+                        <h3>NeoTrust</h3>
+                    </li>
+                    <li><a href="home.html">Home</a></li>
+               </ul>
+            </div>
+        </section>
+        <section class="welcome">
+            <div class="msg">
+                <h3>Welcome <span> username</span>,</h3>
+                <h4>Your Account Number is <span>account_number</span></h4>
+                <p>Thanks for being with us. Wait for account details verification. Thank You.</p>
+            </div>
+        </section>
+    
+       
+
+</body>
+<<script>
+    // Function to get query parameters from the URL
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            username: params.get('username'),
+            account_number: params.get('account_number')
+        };
+    }
+
+    // Set the username and account number in the HTML
+    window.onload = function() {
+        const { username, account_number } = getQueryParams();
+        if (username && account_number) {
+            document.getElementById('username').textContent = username;
+            document.getElementById('account_number').textContent = account_number;
+        } else {
+            // Handle the case where parameters are missing or incorrect
+            alert('Error: Missing username or account number.');
+        }
+    };
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/home.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mastercontainer">
+        <section class="menusec">
+            <div class="menu">
+               <ul>
+                    <li class="logo-container">
+                        <div class="logo"></div>
+                        <h3>NeoTrust Admin</h3>
+                    </li>
+                    <li><a href="home.html">Log Out</a></li>
+               </ul>
+            </div>
+        </section>
+    
+    
+        <section class="Adminbody">
+            <div class="row">
+                <div class="col1">
+                    <p>Total Deposit</p>
+                    <h3>BDT <span>00</span></h3>
+                </div>
+                <div class="col2">
+                    <p>Total Withdraw</p>
+                    <h3>BDT <span>00</span></h3>
+                </div>
+                <div class="col3">
+                    <p>Total Transfer</p>
+                    <h3>BDT <span id="totaltransfer">500</span></h3>
+                </div>
+                <div class="col4">
+                    <p>Total Balance</p>
+                    <h3>BDT <span id="currentbalance">1000</span></h3>
+                </div>
+            </div>
+        
+            <div class="adminservice" id="show_details">
+                <h3>Show Account Details</h3>
+                <form>
+                    <label for="account-number">Enter Account Number</label>
+                    <input type="number" id="account-number" name="account-number" required>
+                    <button type="submit">Details</button>
+                </form>
+            </div>
+        </section>
+        
+
+
+
+
+    </div>
+    
+</body>
+</html>

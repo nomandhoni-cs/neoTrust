@@ -1,0 +1,205 @@
+/* Root Variables */
+:root {
+    --bg-color: #0D1117; /* Darker, modern background */
+    --snd-bg-color: #161B22; /* Slightly lighter secondary */
+    --text-color: #E6EDF3; /* Softer white for better contrast */
+    --main-color: #58A6FF; /* Vibrant blue */
+    --hover-color: #1F6FEB; /* Slightly darker blue */
+    --light-bg: #21262D; /* Subtle background for sections */
+    --box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Main Containers */
+.mastercontainer {
+    width: 100%;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Bar */
+.menusec {
+    width: 100%;
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu ul a {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menu ul a:hover {
+    color: var(--main-color);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    background-image: url(/public/photos/menulogo.png);
+    background-size: cover;
+    margin-right: 10px;
+}
+
+/* Hero Section */
+.mainbody {
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    margin-top: 80px;
+    max-width: 1200px;
+}
+
+.textpart {
+    max-width: 50%;
+}
+
+.textpart h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+
+.textpart h6 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease-in-out;
+}
+
+.img img:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btnclass {
+    display: flex;
+    gap: 15px;
+}
+
+.getstarted, .login, .Adminlogin {
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+.getstarted {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow);
+}
+
+.getstarted:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.login, .Adminlogin {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.login:hover, .Adminlogin:hover {
+    background-color: #E5E7EB;
+    box-shadow: var(--box-shadow);
+}
+
+/* Forms */
+.logincontainer, .registration-container {
+    background-color: var(--snd-bg-color);
+    padding: 2.5rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.formgroup input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    background: var(--light-bg);
+    color: var(--text-color);
+}
+
+.formgroup input::placeholder {
+    color: #bbb;
+}
+
+/* Footer */
+.foot {
+    height: 80px;
+    width: 100%;
+    background-color: var(--bg-color);
+    text-align: center;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}

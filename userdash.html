@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+    <title>NeoTrust</title>
+    <link rel="stylesheet" href="/public/home.css">
+</head>
+<body>
+    <div class="mastercontainer">
+        <section class="menusec">
+            <div class="menu">
+               <ul>
+                    <li class="logo-container">
+                        <div class="logo"></div>
+                        <h3>NeoTrust</h3>
+                    </li>
+                    <li><a href="home.html">Home</a></li>
+               </ul>
+            </div>
+        </section>
+    
+        <section class="main" id="main">
+            <div class="row">
+                <div class="col1">
+                   <p>Name: <span id="username">Username</span></p>
+                   <h3>Acc No. <span id="accnumber">011111111</span></h3>
+                </div>
+                <div class="col3">
+                    <p>Deposit</p>
+                    <h3>BDT <span id="totaldeposit">00</span></h3>
+                 </div>
+                 <div class="col2">
+                    <p>Withdraw</p>
+                    <h3>BDT <span id="totalwithdraw">00</span></h3>
+                </div>
+                <div class="col4">
+                    <p>Current Balance</p>
+                    <h3>BDT <span id="currentbalance">1000</span></h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="service" onclick="openPopup('transfer')">
+                <img src="photos/transfer.png" alt="Transfer">
+                <p>Transfer Money</p>
+            </div>
+            <div class="service" onclick="openPopup('donation')">
+                <img src="photos/donation.png" alt="Donation">
+                <p>Donate to HeartCare</p>
+            </div>
+            <div class="service" onclick="openPopup('recharge')">
+                <img src="photos/recharge.png" alt="Recharge">
+                <p>Mobile Recharge</p>
+            </div>
+            <div class="service" onclick="openPopup('withdraw')">
+                <img src="photos/withdraw.png" alt="Withdraw">
+                <p>Withdraw Request</p>
+            </div>
+        </section>
+
+        <!-- Pop-up Form -->
+        <div id="transferPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('transferPopup')">&times;</span>
+                <h2>Transfer Money</h2>
+                <form>
+                <input type="text" id="transferAccount" placeholder="Enter Account Number">
+                <input type="number" id="transferAmount" placeholder="Enter Amount">
+                <p id="transferMessage" class="message"></p> <!-- Message div -->
+                <button type="button" onclick="submitTransfer()">Transfer</button>
+                </form>
+                
+            </div>
+        </div>
+        
+        <div id="donationPopup" class="popup">
+            <div class="popup-content">
+                <h2>Donate</h2>
+                <form>
+                    <input type="number" id="donationAmount" placeholder="Enter amount">
+                    <button type="button" onclick="submitDonation()">Donate</button>
+                </form>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <!-- Mobile Recharge Popup Form -->
+        <div id="rechargePopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('rechargePopup')">&times;</span>
+                <h2>Mobile Recharge</h2>
+                <form>
+                    <input type="text" id="rechargePhoneNumber" placeholder="Enter Phone Number">
+                    <input type="number" id="rechargeAmount" placeholder="Enter Amount">
+                    <p id="rechargeMessage" class="message"></p> <!-- Message div -->
+                    <button type="button" onclick="submitRecharge()">Recharge</button>
+                </form>
+            </div>
+        </div>
+        
+
+        
+        
+        <div id="withdrawPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('withdrawPopup')">&times;</span>
+                <h2>Withdraw Request</h2>
+                <input type="number" id="withdrawAmount" placeholder="Enter Amount">
+                <p id="withdrawMessage" class="message"></p> <!-- Message div -->
+                <button type="button" onclick="submitWithdraw()">Request Withdraw</button>
+            </div>
+        </div>
+        
+        
+
+    <script src="js/userdash.js"></script>
+</body>
+</html>

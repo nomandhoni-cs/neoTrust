@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Create Account - NeoTrust</title>
+    <link rel="stylesheet" href="/public/home.css" />
+  </head>
+  <body>
+    <section class="mastercontainer">
+      <section class="menusec">
+        <div class="menu">
+          <ul>
+            <li class="logo-container">
+              <div class="logo"></div>
+              <h3>NeoTrust</h3>
+            </li>
+            <li><a href="home.html">Home</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="registration">
+        <div class="registration-container">
+          <h2>Create Your NeoTrust Account</h2>
+
+          <form action="/register" method="POST">
+            <div class="formgroup">
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter Your Full Name"
+                required
+              />
+            </div>
+            <div class="formgroup">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter Your Email"
+                required
+              />
+            </div>
+            <div class="formgroup">
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Enter Your Phone Number"
+                required
+              />
+            </div>
+            <div class="formgroup">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter Your Password"
+                required
+              />
+            </div>
+            <div class="formgroup">
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="Confirm Your Password"
+                required
+              />
+            </div>
+
+            <button type="submit" class="register-btn">Create Account</button>
+            <p class="logintext">
+              Already have an account? <a href="login.html">Login here</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </section>
+  </body>
+  <script>
+    document.querySelector("form").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    let formData = new FormData(this);
+    let jsonData = {};
+    formData.forEach((value, key) => (jsonData[key] = value));
+
+    try {
+        let response = await fetch("http://localhost:5000/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(jsonData)
+        });
+
+        let result = await response.json();
+        if (response.ok) {
+            alert(result.message); // Show success message
+            window.location.href = "home.html"; // Redirect on success
+        } else {
+            alert(result.error); // Show error message
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again.");
+    }
+});
+
+</script>
+
+</html>

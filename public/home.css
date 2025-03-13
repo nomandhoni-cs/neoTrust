@@ -1,0 +1,477 @@
+ :root {
+    --bg-color: #191f36;
+    --snd-bg-color: #262840;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Nunito", serif;
+    scroll-behavior: smooth;
+}
+.menusec {
+    width: 100%;
+    background-color: var(--bg-color);
+
+}
+.mastercontainer
+{
+    width: 100%;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+.menu {
+    /* background-color: #001660; */
+     padding: 20px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure full width */
+    list-style: none; /* Optional: remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0;
+}
+.menu ul a{
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background-image: url(/public/photos/menulogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.btnclass
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+.textpart
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.textpart h1{
+    font-size: 3rem;
+}
+.textpart h6
+{
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.img img
+{
+    width: 40vw;
+    object-fit: cover;
+}
+.mainbody
+{
+    padding: 0 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+.getstarted, .login, .Adminlogin{
+    padding: 3px 3px;
+    background-color: var(--text-color);
+    border-radius: 20px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    border: 1.5px solid var(--bg-color);
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.getstarted:hover,
+.login:hover,
+.Adminlogin:hover{
+    box-shadow: 0 0 .5rem var(--text-color);
+}
+
+/* Home page ended here,
+now login page started */
+.loginsec
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logincontainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--snd-bg-color);
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px var(--snd-bg-color);
+    border-radius: 5px;
+    margin-top: 3rem;
+}
+.logincontainer h2
+{
+    font-size: 1.8rem;
+    margin-bottom: 1.4rem;
+    color: var(--text-color);
+}
+.logincontainer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logincontainer .formgroup input
+{
+    height: 2rem;
+    width: 30vw;
+    min-width: 20rem;
+    border: none;
+}
+.logincontainer  button{
+    padding: 1.5px 8px;
+    background-color: var(--text-color);
+    border-radius: 20px;
+    color: var(--snd-bg-color);
+    font-size: 1.2rem;
+    border: 1.5px solid var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    margin: .5rem 0;
+}
+.logincontainer p{
+    color: var(--text-color);
+
+}
+.logincontainer a{
+    color: var(--text-color);
+    font-weight: 700;
+}
+.logincontainer  button:hover{
+    box-shadow: 0 0 1rem var(--text-color);
+}
+
+/* loginpage ended here 
+registration page starts */
+.registration
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.registration-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--snd-bg-color);
+    padding: 1.5rem;
+    /* box-shadow: 0 4px 8px var(--snd-bg-color); */
+    border-radius: 5px;
+    margin-top: 1.5rem;
+}
+.registration-container h2
+{
+    font-size: 1.7rem;
+    margin-bottom: 1.4rem;
+    color: var(--text-color);
+}
+.registration-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.registration-container .formgroup input
+{
+    height: 1.8rem;
+    width: 30vw;
+    min-width: 20rem;
+    border: none;
+}
+.registration-container  button{
+    padding: 1.5px 8px;
+    background-color: var(--text-color);
+    border-radius: 20px;
+    color: var(--snd-bg-color);
+    font-size: 1.2rem;
+    border: 1.5px solid var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    margin: .5rem 0;
+}
+.registration-container p{
+    color: var(--text-color);
+
+}
+.registration-container a{
+    color: var(--text-color);
+    font-weight: 700;
+}
+.registration-container  button:hover{
+    box-shadow: 0 0 1rem var(--text-color);
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    color: white;
+}
+.row .col1
+{
+    width: 24%;
+    height: 70px;
+    margin: 0.5%;
+    margin-top: 20px;
+    background-color: #23263a;
+    border-radius: 5px;
+    padding: 12px;
+}
+.row .col2
+{
+    width: 24%;
+    height: 70px;
+    margin: 0.5%;
+    margin-top: 20px;
+    background-color: #23263a;
+    border-radius: 5px;
+    padding: 12px;
+}
+.row .col3
+{
+    width: 24%;
+    height: 70px;
+    margin: 0.5%;
+    margin-top: 20px;
+    background-color: #23263a;
+    border-radius: 5px;
+    padding: 12px;
+}.row .col4
+{
+    width: 24%;
+    height: 70px;
+    margin: 0.5%;
+    margin-top: 20px;
+    background-color: #23263a;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+
+/* .services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    padding: 20px;
+    background-color: var(--bg-color);
+    max-width: 1200px; 
+    margin: auto;
+} */
+
+/* admin services */
+.Adminbody {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    gap: 20px; /* Adds space between .row and .adminservice */
+    align-items: center; /* Center everything horizontally */
+    width: 100%;
+}
+
+.Adminbody .row {
+    display: flex; /* Make it horizontal */
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px; /* Space between columns */
+}
+
+.Adminbody .row div {
+    background: #23263a;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1; /* Make all columns equal width */
+    min-width: 150px; /* Ensure they don't get too small */
+}
+
+/* Optional: If you want them to have max width */
+.Adminbody .row div {
+    max-width: 250px;
+}
+
+.adminservice {
+    background: #23263a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 30%; 
+    max-width: 500px; 
+    text-align: center;
+    color: #ffffff;
+}
+.adminservice form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.adminservice form button{
+    width: 50px;
+}
+
+
+
+
+/* log success page */
+.welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome .msg{
+    margin-top: 80px;
+    display: flex;
+    background-color: var(--snd-bg-color);
+    padding: 20px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 50%;
+    gap: 20px;
+}
+.welcome .msg p{
+text-align: center;
+}
+
+/* userdash services */
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.service {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    width: 20%;
+    margin: 2.5%;
+}
+
+.service img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid orange;
+    padding: 10px;
+    background: white;
+}
+
+.service p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.service:hover {
+    transform: scale(1.1);
+}
+
+/* Pop-up Form */
+.popup {
+    display: none;  /* Hide pop-ups by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.popup input {
+    background-color: rgb(233, 232, 232);  /* Light background color */
+    border: 1px solid #ccc;                /* Light border */
+    border-radius: 5px;                    /* Rounded corners */
+    padding: 10px;                          /* Space inside the input */
+    margin: 10px 0;                         /* Space between inputs */
+    width: 100%;                            /* Full width of the container */
+    font-size: 16px;                        /* Larger font for readability */
+    transition: all 0.3s ease-in-out;       /* Smooth transition for focus effect */
+}
+
+.popup input:focus {
+    border-color: var(--bg-color);                  /* Highlight border on focus */
+    background-color: #fff;                 /* White background on focus */
+    box-shadow: 0 0 8px  var(--bg-color);  /* Glow effect on focus */
+    outline: none;                          /* Remove default focus outline */
+}
+.popup button{
+    padding: 4px 10px;
+    background-color: var(--snd-bg-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.popup-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
